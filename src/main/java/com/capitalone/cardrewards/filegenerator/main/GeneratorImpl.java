@@ -51,9 +51,14 @@ public class GeneratorImpl implements Generator {
 		inputRecords.put(3, prop.getProperty(ApplicationConstants.RECORD3));
 		inputRecords.put(4, prop.getProperty(ApplicationConstants.RECORD4));
 		inputRecords.put(5, prop.getProperty(ApplicationConstants.RECORD5));
-
+		
 		int noOfThreads = Integer.valueOf(prop.getProperty(ApplicationConstants.NOOFTHREADS, "1"));
 		int noOfRecords = Integer.valueOf(prop.getProperty(ApplicationConstants.NOOFRECORDS));
+		
+		if(inputRecords.size() != noOfThreads) {
+			System.out.println("no Of threads and recordTypes should match..");
+			System.exit(1);
+		}
 
 		ExecutorService executor = Executors.newFixedThreadPool(noOfThreads);
 		int recordsPerThread = noOfRecords / noOfThreads;
