@@ -40,9 +40,9 @@ public class GenerateSample {
     		prop.load(input);
  
                 //get the property value and print it out
-                System.out.println(prop.getProperty(ApplicationConstants.FIELDS));
-    	        System.out.println(prop.getProperty(ApplicationConstants.OUTPUTFILEPATH));
-    	        System.out.println(prop.getProperty(ApplicationConstants.NOOFTHREADS));
+                System.out.println(ApplicationConstants.FIELDS +" = "+prop.getProperty(ApplicationConstants.FIELDS));
+    	        System.out.println(ApplicationConstants.OUTPUTFILEPATH +" = "+prop.getProperty(ApplicationConstants.OUTPUTFILEPATH));
+    	        System.out.println(ApplicationConstants.NOOFRECORDS +" = "+prop.getProperty(ApplicationConstants.NOOFRECORDS));
  
     	} catch (IOException ex) {
     		ex.printStackTrace();

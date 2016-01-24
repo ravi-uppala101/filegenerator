@@ -39,6 +39,7 @@ public class GeneratorImpl implements Generator {
         			System.out.println(" No of Records written so far..."+i);
         		}
         	}
+        	System.out.println(" No of Records written so far..."+noOfRecords);
             System.out.println("File writing is completed");
         } catch (IOException x) {
             System.err.format("IOException: %s%n", x);
