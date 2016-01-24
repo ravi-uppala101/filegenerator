@@ -6,8 +6,9 @@ This project is used for generating a sample based on given input parameters in 
 fields = ""12345","CO","PD","CR","CO","PD","CR","CO","PD","CR","CO","PD","CR","CO","PD","CR","CO","PD","CR","CO","PD","CR","CO","PD","CR"   //this line is used for the text that goes into the file
 
 outputFilePath = /Users/ravinderuppala/eclipse/workspace/filegenerator  // path to the file where it needs to be generated
+fileName = accountInfo.txt //name of the file
 
-noOfThreads = 5 // no of threads used for writing...it is not used currently...because file generation went faster than I expected
+noOfThreads = 5 // no of threads used for writing
 
 noOfRecords = 60000000 // no of records needed in the file
 

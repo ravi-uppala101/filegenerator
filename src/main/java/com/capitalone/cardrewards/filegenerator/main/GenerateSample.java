@@ -8,18 +8,15 @@ import com.capitalone.cardrewards.filegenerator.constants.ApplicationConstants;
 
 public class GenerateSample {
 
-	
-	
 	public static void main(String[] args) throws Exception {
 		GenerateSample gnerateSample = new GenerateSample();
 		Properties prop = gnerateSample.loadPropertyFile();
 		gnerateSample.generate(prop);
-
 	}
 	
 	public void generate(Properties prop) throws Exception {
-		Generator generator = new GeneratorImpl();
-		generator.generateSampleFile(prop);
+		Generator generator = new GeneratorImpl(prop);
+		generator.generateSampleFile();
 	}
 	
 	public Properties loadPropertyFile() {
@@ -40,8 +37,13 @@ public class GenerateSample {
     		prop.load(input);
  
                 //get the property value and print it out
-                System.out.println(ApplicationConstants.FIELDS +" = "+prop.getProperty(ApplicationConstants.FIELDS));
+                System.out.println(ApplicationConstants.RECORD1 +" = "+prop.getProperty(ApplicationConstants.RECORD1));
+                System.out.println(ApplicationConstants.RECORD2 +" = "+prop.getProperty(ApplicationConstants.RECORD2));
+                System.out.println(ApplicationConstants.RECORD3 +" = "+prop.getProperty(ApplicationConstants.RECORD3));
+                System.out.println(ApplicationConstants.RECORD4 +" = "+prop.getProperty(ApplicationConstants.RECORD4));
+                System.out.println(ApplicationConstants.RECORD5 +" = "+prop.getProperty(ApplicationConstants.RECORD5));
     	        System.out.println(ApplicationConstants.OUTPUTFILEPATH +" = "+prop.getProperty(ApplicationConstants.OUTPUTFILEPATH));
+    	        System.out.println(ApplicationConstants.FILENAME +" = "+prop.getProperty(ApplicationConstants.FILENAME));
     	        System.out.println(ApplicationConstants.NOOFRECORDS +" = "+prop.getProperty(ApplicationConstants.NOOFRECORDS));
  
     	} catch (IOException ex) {
