@@ -4,8 +4,11 @@ This project is used for generating a sample based on given input parameters in 
 
 
 fields = "12345","CO","PD","CR"   //this line is used for the text that goes into the file
+
 outputFilePath = /Users/ravinderuppala/eclipse/workspace/filegenerator  // path to the file where it needs to be generated
+
 noOfThreads = 5 // no of threads used for writing...it is not used currently...because file generation went faster than I expected
+
 noOfRecords = 60000000 // no of records needed in the file
 
 
